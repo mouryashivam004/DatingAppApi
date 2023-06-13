@@ -85,20 +85,20 @@ namespace DatingApp.Controllers
         }
 
         // DELETE: api/User/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAppUser(int id)
-        {
-            var appUser = await _context.Users.FindAsync(id);
-            if (appUser == null)
-            {
-                return NotFound();
-            }
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteAppUser(int id)
+        //{
+        //    var appUser = await _context.Users.FindAsync(id);
+        //    if (appUser == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            _context.Users.Remove(appUser);
-            await _context.SaveChangesAsync();
+        //    _context.Users.Remove(appUser);
+        //    await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         private bool AppUserExists(int id)
         {
